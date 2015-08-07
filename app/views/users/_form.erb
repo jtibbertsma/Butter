@@ -1,0 +1,28 @@
+<% title = new_user ? "Sign Up" : "Sign In" %>
+<% action = new_user ? '/users' : '/session' %>
+
+<h2><%= title %></h2>
+
+<form action="<%= action %>" method="post">
+  <%= auth_token %>
+
+  <% if new_user %>
+    <label>
+      Name
+      <input type="text" name="user[name]" value="<%= user.name %>">
+    </label>
+  <% end %>
+
+  <label>
+    Email
+    <input type="text" name="user[email]" value="<%= user.email %>">
+  </label>
+
+  <label>
+    Password
+    <input type="password" name="user[password]">
+  </label>
+
+  <input type="submit" value="<%= title %>">
+
+</form>
