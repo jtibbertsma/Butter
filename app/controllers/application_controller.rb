@@ -24,6 +24,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def ensure_signed_in
+    unless signed_in?
+      redirect_to new_session_url
+    end
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end

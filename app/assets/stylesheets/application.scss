@@ -16,3 +16,43 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ $my-dark-blue: #2D50AB;
+ $slightly-darker-blue: #1F3878;
+
+.navbar {
+  background: $my-dark-blue;
+}
+
+#collapse-menu > ul > li > a {
+  color: #9898FF;
+}
+
+#collapse-menu > ul > li > a:hover {
+  color: white;
+}
+
+.board-index-header {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.board-index-item > h2 {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.board-index-item {
+  height: 100px;
+  width: 278px;
+  float: left;
+  margin-right: 20px;
+  background: $my-dark-blue;
+}
+
+.board-index-item:hover {
+  background: $slightly-darker-blue;
+}
