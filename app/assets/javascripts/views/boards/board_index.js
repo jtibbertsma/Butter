@@ -1,4 +1,4 @@
-Butter.Views.BoardIndex = Backbone.CompositeView.extend({
+TrelloClone.Views.BoardIndex = Backbone.CompositeView.extend({
   template: JST['boards/index'],
 
   className: "container",
@@ -14,7 +14,7 @@ Butter.Views.BoardIndex = Backbone.CompositeView.extend({
   addBoardIndexItem: function (board) {
     this.addSubview(
       ".board-list",
-      new Butter.Views.BoardIndexItem({model: board})
+      new TrelloClone.Views.BoardIndexItem({model: board})
     );
   },
 

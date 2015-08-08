@@ -15,7 +15,7 @@
 //= require bootstrap
 //= require underscore
 //= require backbone
-//= require butter
+//= require trello_clone
 //= require_tree ../templates
 //= require_tree ./util
 //= require_tree ./models

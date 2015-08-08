@@ -1,7 +1,8 @@
-Butter.Routers.Router = Backbone.Router.extend({
+TrelloClone.Routers.Router = Backbone.Router.extend({
   routes: {
     '': 'boardIndex',
-    'boards': 'boardIndex'
+    'boards': 'boardIndex',
+    'boards/:id': 'boardShow'
   },
 
   initialize: function (options) {
@@ -10,9 +11,13 @@ Butter.Routers.Router = Backbone.Router.extend({
   },
 
   boardIndex: function () {
-    var index = new Butter.Views.BoardIndex({collection: this.boards});
+    var index = new TrelloClone.Views.BoardIndex({collection: this.boards});
     this.mainView.addSubview(".everything", index);
     this.mainView.attachSubviews();
     this.boards.fetch();
+  },
+
+  boardShow: function (id) {
+
   }
 });

@@ -1,4 +1,4 @@
-Butter.Views.BoardIndexItem = Backbone.View.extend({
+TrelloClone.Views.BoardIndexItem = Backbone.View.extend({
   template: JST['boards/index_item'],
   className: "board-index-item",
 
