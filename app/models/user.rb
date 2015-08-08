@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many :boards
+  has_many :lists, through: :boards, source: :lists
 
   attr_reader :password
 

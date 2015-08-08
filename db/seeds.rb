@@ -12,6 +12,8 @@ user = User.create!(
   password: "password123"
 )
 
-Board.create!(title: "Awesome Board", user: user)
-Board.create!(title: "Cool Board", user: user)
+board = Board.create!(title: "Awesome Board", user: user)
 Board.create!(title: "Just Okay Board", user: user)
+
+List.create!(title: "Todo", board: board)
+List.create!(title: "Done", board: board)
