@@ -7,22 +7,49 @@
   <%= auth_token %>
 
   <% if new_user %>
-    <label>
-      Name
-      <input type="text" name="user[name]" value="<%= user.name %>">
-    </label>
+    <div class="form-group">
+      <label>
+        Name
+        <input
+          type="text"
+          name="user[name]"
+          value="<%= user.name %>"
+          class="form-control"
+          placeholder="Name"
+        >
+      </label>
+    </div>
   <% end %>
 
-  <label>
-    Email
-    <input type="text" name="user[email]" value="<%= user.email %>">
-  </label>
+  <div class="form-group">
+    <label>
+      Email
+      <input
+        type="text"
+        name="user[email]"
+        value="<%= user.email %>"
+        class="form-control"
+        placeholder="Email"
+      >
+    </label>
+  </div>
 
-  <label>
-    Password
-    <input type="password" name="user[password]">
-  </label>
+  <div class="form-group">
+    <label>
+      Password
+      <input
+        type="password"
+        name="user[password]"
+        class="form-control"
+        placeholder="Password"
+      >
+    </label>
+  </div>
 
-  <input type="submit" value="<%= title %>">
+  <input
+    type="submit"
+    value="<%= title %>"
+    class="btn btn-default"
+  >
 
 </form>
