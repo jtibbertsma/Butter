@@ -7,8 +7,8 @@ class Api::BoardsController < ApplicationController
 
   def show
     @board = Board.find(params[:id])
-    if @board.user_id != current_user.id
-      render json: {}
+    if !@board || @board.user_id != current_user.id
+      render json: ["Invalid board"], status: :unprocessable_entity
     end
   end
 
@@ -18,7 +18,7 @@ class Api::BoardsController < ApplicationController
     if @board.save
       render :show
     else
-      render json: @board.errors
+      render json: @board.errors, status: :unprocessable_entity
     end
   end
 

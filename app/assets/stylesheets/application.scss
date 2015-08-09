@@ -51,6 +51,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  height: 100%;
 }
 ol, ul {
   list-style: none;
@@ -74,80 +75,89 @@ table {
 
 /* navbar */
 .navbar-default {
-    background-color: $my-dark-blue;
-    border-color: $my-dark-blue;
+  background-color: $my-dark-blue;
+  border-color: $my-dark-blue;
 }
 /* title */
 .navbar-default .navbar-brand {
-    color: $link-color;
-    font-size: 30px;
-    position: absolute;
-    left: 50%;
-    margin-left: -100px;
-    font-family: "Satisfy";
+  color: $link-color;
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  font-family: "Satisfy";
 }
-.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
 .navbar-default .navbar-brand:focus {
-    color: white;
+  color: $link-color;
 }
 /* link */
 .navbar-default .navbar-nav > li > a {
-    color: $link-color;
+  color: $link-color;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: white;
+  color: white;
 }
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:hover, 
 .navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
+  color: #555;
+  background-color: #E7E7E7;
 }
 .navbar-default .navbar-nav > .open > a, 
 .navbar-default .navbar-nav > .open > a:hover, 
 .navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
-    background-color: #D5D5D5;
+  color: #555;
+  background-color: #D5D5D5;
 }
 /* caret */
 .navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: $link-color;
-    border-bottom-color: $link-color;
+  border-top-color: $link-color;
+  border-bottom-color: $link-color;
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: white;
-    border-bottom-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
 }
 .navbar-default .navbar-nav > .open > a .caret, 
 .navbar-default .navbar-nav > .open > a:hover .caret, 
 .navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555;
-    border-bottom-color: #555;
+  border-top-color: #555;
+  border-bottom-color: #555;
 }
 /* mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #DDD;
+  border-color: #DDD;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
+  background-color: #DDD;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
+  background-color: #CCC;
 }
 @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: $link-color;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: white;
-    }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: $link-color;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: white;
+  }
 }
 
-/* cutom styles */
+/* custom styles */
+
+.board-menu {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  background: #EEE;
+}
 
 .board-index-header {
   font-size: 16px;
@@ -164,7 +174,7 @@ table {
 
 .board-index-item {
   height: 100px;
-  width: 33%;
+  width: 30%;
   float: left;
   margin-right: 20px;
   background: $my-dark-blue;
